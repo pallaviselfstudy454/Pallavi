@@ -1,0 +1,116 @@
+BANK Program :
+
+package labs;
+
+import java.util.Scanner;
+
+public class Bank
+{
+	public static void main(String[] args) 
+	{
+		Scanner scanner = new Scanner(System.in);
+		double balance = 0.0;
+
+		        while (true) 
+		        {
+		            System.out.println("\nBanking Application");
+		            System.out.println("1. Deposit");
+		            System.out.println("2. Withdraw");
+		            System.out.println("3. Check Balance");
+		            System.out.println("4. Exit");
+		            System.out.println("Please select an option (1-4): ");
+		       
+		            int choice = scanner.nextInt();
+		            if (choice == 1)
+		            {
+		                System.out.print("Enter the amount to deposit: ");
+		                double depositAmount = scanner.nextDouble();
+		                balance += depositAmount;
+		                System.out.println("You have successfully deposited: " + depositAmount);
+		            } 
+		            else if (choice == 2)
+		            {
+		                System.out.print("Enter the amount to withdraw: ");
+		                double withdrawAmount = scanner.nextDouble();
+		                if (withdrawAmount <= balance) 
+		                {
+		                    balance -= withdrawAmount;
+		                    System.out.println("You have successfully withdrawn: " + withdrawAmount);
+		                } 
+		                else 
+		                {
+		                    System.out.println("Insufficient balance! You cannot withdraw more than your available balance.");
+		                }
+		            }
+		            else if (choice == 3) 
+		            {
+		                System.out.println("Your current balance is: " + balance);
+		            } 
+		            else if (choice == 4) 
+		            {
+		                System.out.println("Thank you for using the banking application. Goodbye!");
+		                break; 
+		                } 
+		            else 
+		            {
+		                System.out.println("Invalid choice! Please select a valid option from 1 to 4.");
+		            }
+		        }
+		        scanner.close();
+		    }
+	}
+
+
+OUTPUT :
+	
+	Banking Application
+	1. Deposit
+	2. Withdraw
+	3. Check Balance
+	4. Exit
+	Please select an option (1-4): 
+	1
+	Enter the amount to deposit: 15000
+	You have successfully deposited: 15000.0
+
+	Banking Application
+	1. Deposit
+	2. Withdraw
+	3. Check Balance
+	4. Exit
+	Please select an option (1-4): 
+	2
+	Enter the amount to withdraw: 1500
+	You have successfully withdrawn: 1500.0
+
+	Banking Application
+	1. Deposit
+	2. Withdraw
+	3. Check Balance
+	4. Exit
+	Please select an option (1-4): 
+	3
+	Your current balance is: 13500.0
+
+	Banking Application
+	1. Deposit
+	2. Withdraw
+	3. Check Balance
+	4. Exit
+	Please select an option (1-4): 
+	4
+	Thank you for using the banking application. Goodbye!
+
+
+	Banking Application
+	1. Deposit
+	2. Withdraw
+	3. Check Balance
+	4. Exit
+	Please select an option (1-4): 
+	5
+	Invalid choice! Please select a valid option from 1 to 4.
+
+
+
+
