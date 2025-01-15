@@ -1,0 +1,91 @@
+1)Square Program :
+
+package com.demo;
+
+public class Square 
+{
+	static int result2;			 //static variable
+	int result1;				 //instance variable
+	int calculatesquare(int s1)  //method definition 
+	{
+		int result = (s1*s1);	 //local variable
+		result1 = result;
+		return result1;
+	}
+}
+
+OUTPUT :
+	num1 = 12
+	num2 = 11
+	The sum = 23
+	The sum : 1
+
+
+
+2)Retational Operator :
+
+package com.demo;
+
+public class RelationalDemo {
+	public static void main(String[]args) {
+	int one = 11;
+	int two = 11;
+	
+	boolean res2 = (one > two);
+	
+	System.out.println("Greater than : "+res2);
+	
+	res2 = (one >= two);
+	System.out.println("Greater than equal : "+res2);
+	res2 = (one < two);
+	System.out.println("Less than : "+res2);
+	res2 = (one <= two);
+	System.out.println("Less than equal : "+res2);
+	res2 = (one == two);
+	System.out.println("Equal to : "+res2);
+	res2 = (one != two);
+	System.out.println("Not equal to : "+res2);
+	
+	}
+}
+
+
+OUTPUT :
+	Greater than : false
+	Greater than equal : true
+	Less than : false
+	Less than equal : true
+	Equal to : true
+	Not equal to : false
+
+
+
+3) Arithmatic Operator :
+
+package com.demo;
+
+public class ArithmaticOperator {
+	public static void main(String[]args) {
+		
+	    int a = 12, b = 5;
+
+	    System.out.println("a + b = " + (a + b));			 // addition operator
+	    
+	    System.out.println("a - b = " + (a - b));		    // subtraction operator
+
+	    System.out.println("a * b = " + (a * b));		    // multiplication operator
+
+	    System.out.println("a / b = " + (a / b));			// division operator
+
+	    System.out.println("a % b = " + (a % b));			// modulo operator
+	  }
+}
+
+OUTPUT :
+	a + b = 17
+	a - b = 7
+	a * b = 60
+	a / b = 2
+	a % b = 2
+
+
